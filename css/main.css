@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.entrance {
+  height: 100%;
+  background: linear-gradient(-60deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+}
+
+.bi-rocket-takeoff{
+  font-size: 3.5rem;
+  color: white;
+}
+
+.bi-file-earmark-person{
+  font-size: 3.5rem;
+  color: white;
+}
+
+#portfolio_page {
+  display: none;
+  height: 100%;
+  background: linear-gradient(-60deg, #000000 0%, #2f297d 56%, #6b212b 100%);
+}
