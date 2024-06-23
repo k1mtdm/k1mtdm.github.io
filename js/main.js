@@ -1,1 +1,1 @@
-const pages =  document.getElementByID("")
+const pages =  document.getElementByID("p")
