@@ -1,9 +1,13 @@
 ---
 import Navigation from "./Navigation.astro";
+import { fade } from 'astro:transitions';
+import '../styles/global.css';
+
 ---
 
-<header class="absolute inset-x-0 top-0 z-50">
+<header class="absolute bg-blue-950 inset-x-0 top-0 z-50" transition:animate={fade({ duration: '0.4s' })}>
     <nav>
         <Navigation />
     </nav>
 </header>
+

@@ -1,9 +1,14 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SkillsList from '../components/SkillsList.astro';
+import ToolsList from '../components/ToolsList.astro';
+
 import '../styles/global.css';
-// Supports weights 100-900
-import '@fontsource-variable/noto-sans-jp';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/m-plus-1';
+import ContactButton from '../components/ContactButton.astro';
 const pageTitle = "ホームページ";
 ---
 
@@ -17,7 +22,64 @@ const pageTitle = "ホームページ";
   </head>
   <body>
     <Header />
-    <h1 class=""></h1>
+    <main class=" bg-gray-200">
+      <div id="hero" class="h-screen bg-cover bg-[url('/src/images/alexis-fauvet-PXHnwEmFzrk-unsplash.jpg')]">
+        <div class="container mx-auto grid md:grid-cols-2 md:grid-rows-2 h-full grid-cols-1 grid-rows-1">
+          <div class="flex row-span-2 items-center justify-center ">
+            <div class="">
+              <h1 class=" text-white whitespace-now max-w-4xl mb-4 text-5xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+                30代、未経験から<br>エンジニア転職を目指す<br>ポートフォリオサイト
+              </h1>
+              <p class=" text-white whitespace-now max-w-3xl text-3xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">
+                <span class="text-ne-blue">LOOK AT MY</span><span class="text-ne-green"> FAIL!!</span>
+              </p>
+              <p class="text-3xl bg-clip-content w-fit bg-black text-white font-bold">失敗談＆お祈り通知履歴 公開中</p>
+              <button class="font-sans bg-gray-500 hover:bg-blue-700 text-white font py-2 px-4 rounded m-6 mx-auto">
+                about me/skill
+              <button>
+            </div>
+          </div>
+          <div class="invisible md:visible items-center justify-center">2</div>
+          <div class="invisible md:visible">
+           ddd
+          </div>
+        </div>
+      </div>
+      <div id="about_site" class="p-12">
+        <div class="container grid grid-row-2 mx-auto">
+          <h2 class="palt font-sans font-bold my-6"><span class="text-ne-blue">ABOUT</span><br>THIS SITE</h2>
+          
+          <p class="text-2xl font-medium">業界未経験からデジタルマーケティング職を目指す30代男性のポートフォリオサイトです。<br>
+            *キャリアのファーストステップとして<span class="bg-ne-green">データエンジニア、DB/BIエンジニア職の採用を目指します。</span>
+            またこのサイト、掲載の成果物についての作成プロセスなども公開しています。
+            同じように未経験から転職を目指す同志の皆様の参考にもなれば幸いです。
+            転職を達成したとき、<span class="bg-ne-green">公開した私の失敗の数々が皆様にとって価値あるコンテンツとなるはずです。</span>
+          </p>
+        </div>
+      </div>
+      <div id="skills" class="px-12">
+        <div class="container grid grid-cols-1 md:grid-cols-2  mx-auto my-6 gap-5">
+          <h2 class="md:col-span-2 col-span-1 palt font-sans font-bold ">My <span class="text-ne-blue">Skills </span>and Tools</h2>
+          <div class="">
+            <SkillsList />
+          </div>
+          <div class="">
+            <ToolsList />
+          </div>
+        </div>
+        <div class="col-span-8 m-6">
+          <h3>Deliverables</h3>
+          <div class="flex flex-nowrap m-3 gap-3 overflow-scroll">
+            <div class="bg-gray-100 h-48 min-w-80">01</div>
+            <div class="bg-gray-100 h-48 min-w-80">02</div>
+            <div class="bg-gray-100 h-48 min-w-80">03</div>
+          </div>
+        </div>
+      </div>
+     
+    </main>
+    
+    
     <Footer />
   </body>
 </html>
