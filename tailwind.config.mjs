@@ -23,7 +23,7 @@ export default {
 
 		extend: {
 			colors: {
-				'ne-green': '#e1ff68',
+				'ne-green': '#defe24',
 				'ne-blue': '#1644d4',
 			},
 
