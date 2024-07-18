@@ -8,3 +8,14 @@ export default defineConfig({
   site: 'https://k1mtdm.github.io/',
   integrations: [tailwind(), icon()]
 });
+
+module.exports = {
+  plugins: [
+    require('postcss-preset-env')({
+      stage: 1,
+      features: {
+        'nesting-rules': true
+      }
+    })
+  ]
+}
