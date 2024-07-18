@@ -1,6 +1,8 @@
 ---
 import Card from './Card.astro';
 import ToolsIcon from './ToolsIcon.astro';
+import Splide from '@splidejs/splide';
+import '@splidejs/splide/css/sea-green';
 ---
 
 
@@ -17,7 +19,6 @@ import ToolsIcon from './ToolsIcon.astro';
                         title="邦画の人気はコンテンツ重視か"
                         body="海外では脚本の完成時点でヒット予測ができてしまうという。ネットフリックスのランキングが日本だけ独特すぎると話題になった。"
                     />
-             
                 </div>
             </li>
             <li class="splide__slide">
@@ -109,7 +110,6 @@ import ToolsIcon from './ToolsIcon.astro';
 
 <script>
     import Splide from '@splidejs/splide';
-    import '@splidejs/splide/css/sea-green';
 
     const splide = new Splide( '.splide' ,{
         type: 'loop',

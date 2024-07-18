@@ -2,7 +2,7 @@
 import Card from '../components/Card.astro';
 import '../styles/global.css';
 import CardOinori from './CardOinori.astro';
-import Carousel from './Carousel.astro'
+import Carousel from '../components/Carousel.astro';
 import { Icon } from 'astro-iconify';
 
 ---
@@ -32,7 +32,7 @@ import { Icon } from 'astro-iconify';
         </h2>
       </div>
       <div class="col-span-4">
-          <Carousel client:load/>
+          <Carousel />
       </div>
     </div>
     <div class="grid grid-rows-[auto_32px] row-span-1 col-span-2 bg-light-green rounded-b-3xl px-16">
