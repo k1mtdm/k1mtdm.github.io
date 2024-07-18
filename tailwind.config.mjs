@@ -23,14 +23,22 @@ export default {
 
 		extend: {
 			colors: {
-				'ne-green': '#defe24',
-				'ne-blue': '#1644d4',
+				'ne-green': '#39ff14',
+				'ne-blue': '#1484FF',
+				'ne-orange': '#FFAA14',
+				'ne-yellow': '#d9eb4b',
+				'pink': '#FF14C2',
+				'light-green': '#B8D3D1',
+				'back-green': '#14726E',
+				'hero-orange': '#FF3C00',
+				'hero-lime': '#D0FF4C',
+
 			},
 
 
 			fontFamily: {
 				sans: ['Inter Variable', ...defaultTheme.fontFamily.sans],
-				roboto: ['Roboto', 'Noto Sans JP Variable'],
+				roboto: ['Roboto', 'Noto Sans JP Variable',...defaultTheme.fontFamily.sans],
 
 			  },
 

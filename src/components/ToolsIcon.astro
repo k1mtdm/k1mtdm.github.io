@@ -1,0 +1,11 @@
+---
+interface Props {
+	tool: string;
+	icon_color: string;
+}
+
+const { tool, icon_color} = Astro.props;
+---
+
+<div class={`${icon_color} px-4 py-3 text-center text-xs md:text-sm font-semibold inline-block text-white cursor-point rounded-full`}>{tool}</div>
+

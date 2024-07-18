@@ -1,0 +1,147 @@
+---
+import Card from './Card.astro';
+import ToolsIcon from './ToolsIcon.astro';
+---
+
+
+<section class="splide" aria-label="Splideの基本的なHTML">
+
+    <div class="splide__track">
+        <div class="z-10 sp-gradation-right absolute h-full w-60 top-0 right-0"></div>
+        <div class="z-10 sp-gradation-left absolute h-full w-60 top-0 left-0"></div>
+        <ul class="splide__list">
+            <li class="splide__slide">
+                <div class="splide__slide__container h-full">
+                    <Card
+                        href="#"
+                        title="邦画の人気はコンテンツ重視か"
+                        body="海外では脚本の完成時点でヒット予測ができてしまうという。ネットフリックスのランキングが日本だけ独特すぎると話題になった。"
+                    />
+             
+                </div>
+            </li>
+            <li class="splide__slide">
+                <div class="splide__slide__container h-full">
+                    <Card
+                        href="#"
+                        title="業務効率化アプリ作成"
+                        body="就労移行支援事業所における毎月の書類作成を自動化するデスクトップアプリを作成してみた。"
+                    />
+                </div>
+            </li>
+            <li class="splide__slide">
+                <div class="splide__slide__container h-full">
+                    <Card
+                        href="#"
+                        title="求人サイトから各種条件を抽出しリスト化してみた"
+                        body="deed"
+                    />
+                </div>
+            </li>
+            <li class="splide__slide">
+                <div class="splide__slide__container h-full">
+                    <Card
+                        href="#"
+                        title="なんでもかんでも"
+                        body="ここにテキストが入ります"
+                    />
+                </div>
+            </li>
+        </ul>
+       
+    </div>
+    
+
+</section>
+
+<style>
+
+.splide {
+  max-width: 960px;
+  height: 100%;
+  padding: 1.5em 3em;
+  background: linear-gradient(to left, #B8D3D1 20%, hwb(143 74% 0%) 50%, #B8D3D1 80%);
+
+}
+
+.splide__track {
+  width: 100%;
+  height: 100%;
+}
+
+.splide__slide {
+  width: 50%;
+  height: 80%;
+  opacity: .3; /* 左右のスライドを薄くする */
+  transform: scale(1); /* 左右のスライドを小さくする */
+  transition: .7s; /* ゆっくり小さくさせる */
+  background: #FF3C00;
+  border-radius: 2rem;
+}
+
+/* アクティブなスライドのスタイル */
+.splide__slide.is-active {
+  opacity: 0.9; /* 中央のスライドは薄くしない */
+  transform: scale(1); /* 中央のスライドは小さくしない */
+  z-index: 1; /* 中央のスライドを一番上にする */
+  background-color: #14726E;
+  background-size:cover;
+  border: 2px solid #50c9c3 ;
+  padding: 3px;
+
+}
+
+
+
+
+.sp-gradation-right {
+  background-image: linear-gradient(to right,rgba(255,255,255,0) 0, #B8D3D1 60%);
+  
+}
+
+.sp-gradation-left {
+  background-image: linear-gradient(to left,rgba(255,255,255,0) 0, #B8D3D1 60%);
+  
+}
+
+
+</style>
+
+<script>
+    import Splide from '@splidejs/splide';
+    import '@splidejs/splide/css/sea-green';
+
+    const splide = new Splide( '.splide' ,{
+        type: 'loop',
+
+        autoWidth: true,
+        autoHeight: true,
+        rewind: true,
+        gap: 32,
+        focus: 'center',
+        perPage: 3,
+        autoplay: true,
+        interval: 3000,
+        pauseOnHover: true,
+        updateOnMove: true,
+        padding: 0,
+        pagination: true,
+
+
+
+
+
+    });
+
+    
+
+
+    document.addEventListener( 'DOMContentLoaded', function() {
+        splide.mount();
+
+        
+    } );
+
+
+</script>
+
