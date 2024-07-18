@@ -4,6 +4,7 @@ import '../styles/global.css';
 import CardOinori from './CardOinori.astro';
 import Carousel from '../components/Carousel.astro';
 import { Icon } from 'astro-iconify';
+import Backgd3D from './Backgd3D.astro';
 
 ---
 
@@ -21,7 +22,7 @@ import { Icon } from 'astro-iconify';
       <div class="absolute right-5 top-3 font-bold text-3xl w-16 h-16 bg-hero-lime rounded-full text-hero-orange flex items-center justify-center"><Icon class="w-2/3 h-2/3 pb-1" name="hugeicons:hand-prayer" /></div>
       <h1 class="absolute left-16 bottom-0 font-sans text-hero-lime text-4xl">PORTFOLIO SITE</h1>
     </div>
-    <div class="row-span-3 col-span-4 grid grid-cols-6 bg-light-green">
+    <div id="your-element-selector" class="row-span-3 col-span-4 grid grid-cols-6 bg-light-green">
       <div class="col-span-2 h-full ml-16 ">
         <h2 class="font-sans text-hero-orange text-5xl leading-tight md:text-7xl font-bold mt-8 whitespace-nowrap">
           I will be<br>
@@ -107,3 +108,5 @@ import { Icon } from 'astro-iconify';
     
   </section>
 </div>
+
+<Backgd3D />
