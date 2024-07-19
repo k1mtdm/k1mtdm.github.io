@@ -4,12 +4,12 @@ import '../styles/global.css';
 import CardOinori from './CardOinori.astro';
 import Carousel from '../components/Carousel.astro';
 import { Icon } from 'astro-iconify';
-
+import ButtonLink from "../components/ButtonLink.astro";
 ---
 
-<div class="h-screen bg-back-green">
-  <section class="h-screen grid grid-cols-4 grid-rows-6 mx-12 py-8">
-    <div class="relative row-span-1 col-span-4 bg-light-green rounded-t-3xl">
+<div class="md:h-screen bg-back-green">
+  <section class="h-screen grid grid-cols-4 grid-rows-6 mx-4 py-4 md:mx-12 md:py-8 relative">
+    <div class="relative row-span-1 col-span-4 bg-light-green rounded-t-3xl z-10 shadow-[inset_0px_5px_2px_rgba(150,250,150,1)]">
       <nav class="flex items-center justify-between p-6 lg:px-8">
         <div class="flex mx-auto gap-10">
           <a href="#" class="text-2xl font-semibold leading-6 text-hero-lime">Home</a>
@@ -21,9 +21,9 @@ import { Icon } from 'astro-iconify';
       <div class="absolute right-5 top-3 font-bold text-3xl w-16 h-16 bg-hero-lime rounded-full text-hero-orange flex items-center justify-center"><Icon class="w-2/3 h-2/3 pb-1" name="hugeicons:hand-prayer" /></div>
       <h1 class="absolute left-16 bottom-0 font-sans text-hero-lime text-4xl">PORTFOLIO SITE</h1>
     </div>
-    <div class="row-span-3 col-span-4 grid grid-cols-6 bg-light-green">
-      <div class="col-span-2 h-full ml-16 ">
-        <h2 class="font-sans text-hero-orange text-5xl leading-tight md:text-7xl font-bold mt-8 whitespace-nowrap">
+    <div class="row-span-3 col-span-4 grid grid-cols-6 bg-light-green relative shadow-[inset_5px_0px_2px_rgba(150,250,150,1)]">
+      <div class="col-span-2 h-full ml-16 z-10 ">
+        <h2 class="font-sans text-hero-orange text-6xl leading-tight md:text-7xl font-bold mt-8 whitespace-nowrap">
           I will be<br>
           Data Engineer,<br>
           Data Scientist,<br>
@@ -31,23 +31,23 @@ import { Icon } from 'astro-iconify';
           maybe...
         </h2>
       </div>
-      <div class="col-span-4">
+      <div class="col-span-4 hidden md:block z-0">
           <Carousel />
       </div>
     </div>
-    <div class="grid grid-rows-[auto_32px] row-span-1 col-span-2 bg-light-green rounded-b-3xl px-16">
-      <div class="flex row-span-1 pt-3">
-        <a href="#" class="flex-grow flex items-center justify-center bg-hero-orange rounded-full h-16 w-8 font-sans text-xl font-semibold text-white text-center ">Contact me</a>
-        <a href="#" class="flex-auto flex items-center justify-center bg-hero-lime rounded-full h-16 w-8 font-sans text-xl font-semibold text-white mx-6">Contact me</a>
+    <div class="grid grid-rows-[auto_32px] row-span-3 md:row-span-1 col-span-2 bg-light-green rounded-b-3xl px-16 z-10">
+      <div class="flex row-span-1 pt-3 gap-3">
+        <ButtonLink class='primary'>ContactMe</ButtonLink>
+        <ButtonLink class='primary round'>ContactMe</ButtonLink>
       </div>
       
     </div>
-    <div class="grid grid-rows-[auto_16px_12px] col-span-2 bg-light-green">
+    <div class="row-span-3 md:row-span-1 grid grid-rows-[auto_16px_12px] col-span-2 bg-light-green relative z-0">
       <div class="row-span-1 bg-back-green">      
-        <ul class="w-full h-full bg-gradient-to-l from-light-green from-10% via-hero-lime to-light-green rounded-br-3xl flex flex-row-reverse gap-4 items-center pr-16 list-none">
-          <li class=""><Icon class="mx-auto  h-12 w-12 text-hero-orange " name="mdi:github" /></li>
-          <li class= ""><Icon class=" h-8 w-8 text-hero-orange " name="ri:twitter-x-line" /></li>
-          <li class= ""><Icon class=" h-16 w-16 text-hero-orange" name="simple-icons:qiita" /></li>
+        <ul class="w-full h-full bg-light-green rounded-br-3xl flex flex-row-reverse gap-4 items-center pr-16 list-none  relative shadow-[inset_-10px_-10px_3px_rgba(150,250,150,0.8)]">
+          <li class=""><Icon class="mx-auto  h-12 w-12 text-hero-orange absolute bottom-3 right-4" name="mdi:github" /></li>
+          <li class= ""><Icon class=" h-8 w-8 text-hero-orange  absolute bottom-4 right-20" name="ri:twitter-x-line" /></li>
+          <li class= ""><Icon class=" h-16 w-16 text-hero-orange  absolute bottom-0 right-32" name="simple-icons:qiita" /></li>
         </ul>
       </div>
       <div class="rounded-tl-3xl bg-back-green row-span-1">
@@ -56,7 +56,7 @@ import { Icon } from 'astro-iconify';
       </div>
       <div class="row-span-1 bg-back-green"></div>
     </div>
-    <div class="row-span-2 col-span-2 flex flex-grow w-full px-0 py-8">
+    <div class="row-span-2 col-span-2 w-full px-0 py-8 hidden">
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 class="title-font font-medium text-hero-lime tracking-widest text-sm mb-3">About</h2>
         <nav class="list-none mb-10">
@@ -92,7 +92,7 @@ import { Icon } from 'astro-iconify';
         </nav>
       </div>
     </div>
-    <div class="row-span-2 col-span-2 px-16 font-sans">
+    <div class="row-span-2 col-span-2 px-16 font-sans hidden">
       <p class="font-sans text-lg text-hero-lime">
         未経験からデジタルマーケティング領域への転職活動をめざすポートフォリオです。<br>
         データエンジニア、BIエンジニアでの採用を目指します。<br>
