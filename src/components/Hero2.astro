@@ -4,112 +4,241 @@ import '../styles/global.css';
 import CardOinori from './CardOinori.astro';
 import Carousel from '../components/Carousel.astro';
 import { Icon } from 'astro-iconify';
-import ButtonLink from "../components/ButtonLink.astro";
-import Backg3D from './Backg3D.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+import Vanta from './Vanta.astro';
 ---
 
-<div class="md:h-screen bg-back-green">
-  <section class="h-screen grid grid-cols-4 grid-rows-6 mx-4 py-4 md:mx-12 md:py-8 relative">
-    <div class="relative row-span-1 col-span-4 bg-light-green rounded-t-3xl z-10 shadow-[inset_0px_5px_2px_rgba(150,250,150,1)]">
-      <nav class="flex items-center justify-between p-6 lg:px-8">
-        <div class="flex mx-auto gap-10">
-          <a href="#" class="text-2xl font-semibold leading-6 text-hero-lime">Home</a>
-          <a href="#" class="text-2xl font-semibold leading-6 text-gray-100">About</a>
-          <a href="#" class="text-2xl font-semibold leading-6 text-gray-100">Skill</a>
-          <a href="#" class="text-2xl font-semibold leading-6 text-gray-100">Contents</a>
-        </div>
-      </nav>
-      <div class="absolute right-5 top-3 font-bold text-3xl w-16 h-16 bg-hero-lime rounded-full text-hero-orange flex items-center justify-center"><Icon class="w-2/3 h-2/3 pb-1" name="hugeicons:hand-prayer" /></div>
-      <h1 class="absolute left-16 bottom-0 font-sans text-hero-lime text-4xl">PORTFOLIO SITE</h1>
-    </div>
-    <div class="row-span-3 col-span-4 grid grid-cols-6 bg-light-green relative shadow-[inset_5px_0px_2px_rgba(150,250,150,1)]">
-      <div class="col-span-2 h-full ml-16 z-10 ">
-        <h2 class="font-sans text-hero-orange text-6xl leading-tight md:text-7xl font-bold mt-8 whitespace-nowrap">
-    <div id="your-element-selector" class="row-span-3 col-span-4 grid grid-cols-6 bg-light-green">
-      <div class="col-span-2 h-full ml-16 ">
-        <h2 class="font-sans text-hero-orange text-5xl leading-tight md:text-7xl font-bold mt-8 whitespace-nowrap">
-          I will be<br>
-          Data Engineer,<br>
-          Data Scientist,<br>
-          Digital Marketing,<br>
-          maybe...
-        </h2>
+<!-- <Vanta> -->
+<div class="h-screen min-h-[600px] bg-black p-4">
+  <section
+    class="z-10 grid h-full grid-cols-6 grid-rows-12 rounded-3xl bg-white outline outline-8 outline-black"
+  >
+    <!-- 1行目6列 ナビゲーション-->
+    <div
+      class="relative order-1 col-span-6 row-span-1 flex overflow-hidden px-6 py-4"
+    >
+      <div class="my-auto w-1/3 flex-none items-center">
+        <h1
+          class="inlin-block my-auto font-sans text-4xl font-extrabold text-black"
+        >
+          THIS IS ME
+        </h1>
       </div>
-      <div class="col-span-4 hidden md:block z-0">
-          <Carousel />
+      <!-- ナビゲーション中央スペース -->
+      <div class="mx-6 hidden flex-shrink sm:block">
+        <nav
+          class="flex h-full w-full flex-row items-center justify-between gap-3"
+        >
+          <a
+            href="#"
+            class="text-2xl font-semibold leading-6 text-black hover:text-hero-lime"
+            >About</a
+          >
+          <a
+            href="#"
+            class="text-2xl font-semibold leading-6 text-black hover:text-hero-lime"
+            >Skill</a
+          >
+          <a
+            href="#"
+            class="text-2xl font-semibold leading-6 text-black hover:text-hero-lime"
+            >Contents</a
+          >
+        </nav>
       </div>
-    </div>
-    <div class="grid grid-rows-[auto_32px] row-span-3 md:row-span-1 col-span-2 bg-light-green rounded-b-3xl px-16 z-10">
-      <div class="flex row-span-1 pt-3 gap-3">
-        <ButtonLink class='primary'>ContactMe</ButtonLink>
-        <ButtonLink class='primary round'>ContactMe</ButtonLink>
-      </div>
-      
-    </div>
-    <div class="row-span-3 md:row-span-1 grid grid-rows-[auto_16px_12px] col-span-2 bg-light-green relative z-0">
-      <div class="row-span-1 bg-back-green">      
-        <ul class="w-full h-full bg-light-green rounded-br-3xl flex flex-row-reverse gap-4 items-center pr-16 list-none  relative shadow-[inset_-10px_-10px_3px_rgba(150,250,150,0.8)]">
-          <li class=""><Icon class="mx-auto  h-12 w-12 text-hero-orange absolute bottom-3 right-4" name="mdi:github" /></li>
-          <li class= ""><Icon class=" h-8 w-8 text-hero-orange  absolute bottom-4 right-20" name="ri:twitter-x-line" /></li>
-          <li class= ""><Icon class=" h-16 w-16 text-hero-orange  absolute bottom-0 right-32" name="simple-icons:qiita" /></li>
-        </ul>
-      </div>
-      <div class="rounded-tl-3xl bg-back-green row-span-1">
-        
+      <!-- ナビゲーション・通知 -->
+      <div
+        class="ml-auto flex flex-grow items-center overflow-hidden rounded-full bg-[#ffffff]"
+      >
+        <!-- テキストロール -->
+        <div class="relative flex w-full overflow-x-hidden font-sans font-bold">
+          <div class="animate-marquee whitespace-nowrap">
+            <span class="mx-4 text-xl">最終更新日:2024-7-24</span>
+            <span class="mx-4 text-xl">お祈りカウントリアルタイム公開中→</span>
+          </div>
 
+          <div class="animate-marquee2 absolute top-0 whitespace-nowrap">
+            <span class="mx-4 text-xl">最終更新日:2024-7-24</span>
+            <span class="mx-4 text-xl">お祈りカウントリアルタイム公開中→</span>
+          </div>
+        </div>
+        <div class="ml-auto aspect-square h-[100%] rounded-full bg-hero-lime">
+        </div>
       </div>
-      <div class="row-span-1 bg-back-green"></div>
-    </div>
-    <div class="row-span-2 col-span-2 w-full px-0 py-8 hidden">
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-hero-lime tracking-widest text-sm mb-3">About</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-hero-lime hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a class="text-hero-lime hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a class="text-hero-lime hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-hero-lime hover:text-gray-800">Fourth Link</a>
-          </li>
-        </nav>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-lime-300 tracking-widest text-sm mb-3">About</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-hero-lime hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a class="text-hero-lime hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a class="text-hero-lime hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-hero-lime hover:text-gray-800">Fourth Link</a>
-          </li>
-        </nav>
+      <!-- 通知アイコン -->
+      <div
+        class="ml-4 aspect-square h-full flex-none rounded-full border-[1px] border-black bg-white"
+      >
       </div>
     </div>
-    <div class="row-span-2 col-span-2 px-16 font-sans hidden">
-      <p class="font-sans text-lg text-hero-lime">
-        未経験からデジタルマーケティング領域への転職活動をめざすポートフォリオです。<br>
-        データエンジニア、BIエンジニアでの採用を目指します。<br>
-        採用担当者の方へ＋同じように未経験から転職を考えている方にむけて<br>
-        学習と転職活動の履歴、失敗談を掲載しています。<br>
-        不採用通知履歴（お祈りアラート）をリアルタイムで更新しています。
+
+    <!-- タイトルエリア -->
+    <div
+      class="relative z-10 order-2 col-span-6 row-span-4 ml-8 flex-col overflow-hidden border-b-2 border-black pt-4 sm:col-span-2 sm:row-span-4 sm:overflow-hidden"
+    >
+      <div class="absolute -bottom-3 -right-4 z-10">
+        <h1
+          class="font-sans text-8xl text-hero-lime drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.1)] sm:text-7xl"
+        >
+          Portfolio
+        </h1>
+      </div>
+      <div class="absolute z-10">
+        <h2
+          class="palt max-w-[100%] pt-8 font-sans text-6xl font-bold leading-none text-black sm:text-[4vw]"
+        >
+          KEIICHI<br />MITSUDOME
+        </h2>
+        <h3 class="mt-2 font-serif text-xl">
+          (will be) <br />Data Engineer,Analyst &<br />
+          Digital Marketing
+        </h3>
+      </div>
+    </div>
+
+    <!-- カルーセルエリア -->
+    <div
+      class="relative order-3 col-span-4 row-span-4 m-4 mr-16 hidden overflow-hidden rounded-3xl border-2 border-black outline outline-2 outline-offset-2 outline-black sm:block"
+    >
+      <Vanta>
+        <div class="absolute left-3 top-3 z-10">
+          <h2 class="">Contents</h2>
+        </div>
+        <div class="h-[100%] w-[100%]">
+          <Carousel />
+        </div>
+      </Vanta>
+    </div>
+
+    <!-- プロフィール -->
+    <div
+      class="relative z-10 order-4 col-span-7 row-span-3 mx-16 h-full flex-col bg-white sm:col-span-2 sm:row-span-4"
+    >
+      <p class="font-sans text-sm font-medium">
+        未経験からのIT転職をめざすポートフォリオサイトです。<br />
+        <span class="bg-hero-lime"
+          >データエンジニア、DB/BIエンジニア職の採用を目指します。</span
+        >
+        またこのサイト、掲載の成果物についての作成プロセス、失敗談なども公開しています。
+        <span class="bg-hero-lime"
+          >公開した私の失敗の数々が皆様にとって価値あるコンテンツとなるはずです。</span
+        >
       </p>
     </div>
+    <!-- スキルエリア -->
+    <div
+      class="relative z-10 order-5 col-span-4 row-span-5 hidden bg-white sm:grid sm:grid-rows-[auto_24px_6px]"
+    >
+      <div class="row-span-1 bg-black">
+        <div
+          class="relative flex h-full w-full list-none rounded-br-3xl bg-white py-8 pl-4 pr-16"
+        >
+          <article
+            class="flex max-w-96 flex-col overflow-hidden rounded-3xl border-2 border-black bg-gainsboro px-8 py-4"
+            id="card"
+          >
+            <h2 class="title w-full font-sans">Making of this site</h2>
+            <p class="mt-auto inline-block font-sans text-base font-medium">
+              未経験からのIT転職をめざすポートフォリオサイトです。<br />
+              <span class="bg-hero-lime"
+                >データエンジニア、DB/BIエンジニア職の採用を目指します。</span
+              >
+              またこのサイト、掲載の成果物についての作成プロセス、失敗談なども公開しています。
+              <span class="bg-hero-lime"
+                >公開した私の失敗の数々が皆様にとって価値あるコンテンツとなるはずです。</span
+              >
+            </p>
+          </article>
+          <div
+            class="ml-3 flex-grow overflow-hidden rounded-3xl border-2 border-black"
+            id="card"
+          >
+            <div
+              class="h-full w-full bg-[url('/src/images/alexis-fauvet-PXHnwEmFzrk-unsplash.jpg')] bg-cover"
+            >
+            </div>
+          </div>
+          <div class="ml-3 w-20 shrink rounded-full bg-blue-500" id="card">
+          </div>
 
-    
+          <li class="">
+            <Icon
+              class="absolute bottom-4 right-20 h-8 w-8 text-black"
+              name="ri:twitter-x-line"
+            />
+          </li>
+          <li class="">
+            <Icon
+              class="absolute bottom-0 right-32 h-16 w-16 text-black"
+              name="simple-icons:qiita"
+            />
+          </li>
+          <li class="">
+            <Icon
+              class="absolute bottom-3 right-4 h-12 w-12 text-black"
+              name="simple-icons:github"
+            />
+          </li>
+        </div>
+      </div>
+      <div class="row-span-1 rounded-tl-3xl bg-black"></div>
+      <div class="row-span-1 bg-black"></div>
+    </div>
 
-    
+    <!-- コンタクトボタンエリア -->
+    <div
+      class="relative z-10 order-6 col-span-6 row-span-1 mt-auto flex h-full rounded-b-3xl bg-white px-2 drop-shadow-[0_17px_0px_rgba(44,44,44,1)] sm:col-span-2"
+    >
+      <div class="row-span-1 flex w-full">
+        <ButtonLink
+          class="round mb-2 mt-auto flex-grow bg-hero-orange text-white"
+          >Contact</ButtonLink
+        >
+      </div>
+    </div>
+
+    <!-- サイトマップ（仮） -->
+    <div
+      class="order-7 col-span-6 row-span-3 flex w-full items-center bg-black sm:col-span-2 sm:row-span-2"
+    >
+      <div class="w-full px-4 sm:w-1/2 lg:w-1/4">
+        <h2
+          class="title-font mb-3 text-sm font-medium tracking-widest text-hero-lime"
+        >
+          About
+        </h2>
+        <nav class="list-none">
+          <li>
+            <a class="text-hero-lime hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-hero-lime hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-hero-lime hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-hero-lime hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+    </div>
+
+    <!--  -->
+    <div
+      class="z-10 order-8 row-span-2 -mt-[20px] hidden gap-3 rounded-t-3xl bg-black pl-8 pt-0 sm:col-span-4 sm:flex"
+    >
+      <div class="h-[100%] w-1/4 px-4">
+        <h3 class="h-12 w-full font-sans text-2xl font-medium text-hero-lime">
+          TEST
+        </h3>
+      </div>
+      <div class="h-[100%] w-1/4 rounded-t-3xl bg-gainsboro"></div>
+      <div class="h-[100%] w-1/4 rounded-t-3xl bg-hero-orange"></div>
+      <div class="h-[100%] w-1/4 rounded-3xl bg-gainsboro"></div>
+    </div>
   </section>
 </div>
+<!-- </Vanta> -->
 
-<Backg3D />
+<style></style>

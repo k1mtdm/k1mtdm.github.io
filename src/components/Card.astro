@@ -1,26 +1,32 @@
 ---
 interface Props {
-	title: string;
-	body: string;
-	href: string;
+  card_number: string;
+  title: string;
+  body: string;
+  href: string;
 }
 
-const { href, title, body,} = Astro.props;
+const { card_number, href, title, body } = Astro.props;
 
+import { number } from 'astro/zod';
 import ToolsIcon from './ToolsIcon.astro';
 ---
-<a href={href} class="inline-block w-full h-full rounded-3xl px-8 pt-6">
-	<div class="rounded-t-3xl w-full h-1/4" >
-		<span class="inline-block text-3xl font-roboto font-extrabold text-hero-lime )]">{title}</span>
-	</div>
-	<div class="h-2/4">
-		<p class="break-word font-sans font-light text-lg text-hero-lime">{body}</p>
-	</div>
-	<div class="h-1/4 relative">
-		<div class="absolute flex gap-2 bottom-4 right-0">
-			<ToolsIcon tool="Python" icon_color=bg-blue-900 />
-			<ToolsIcon tool="html/css" icon_color=bg-hero-orange />
-			<ToolsIcon tool="javascript" icon_color=bg-hero-orange />
-		</div>	
-	</div>
+
+<a
+  href={href}
+  class="relative inline-block h-64 w-96 rounded-3xl bg-gainsboro px-8 pt-6"
+>
+  <span
+    class="absolute -bottom-5 -right-5 inline-block overflow-visible font-sans text-9xl font-extrabold"
+    >{card_number}</span
+  >
+  <div class="h-1/4 rounded-t-3xl">
+    <span
+      class="text-bg-green)] inline-block font-roboto text-3xl font-extrabold"
+      >{title}</span
+    >
+  </div>
+  <div class="">
+    <p class="break-word text-bg-green font-sans text-lg font-light">{body}</p>
+  </div>
 </a>

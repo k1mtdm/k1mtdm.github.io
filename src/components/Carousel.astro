@@ -6,15 +6,25 @@ import '@splidejs/splide/css/sea-green';
 ---
 
 
-<section class="splide" aria-label="Splideの基本的なHTML">
+<section class="splide" aria-label="Splideの基本的なHTML"> 
 
+    <div class="splide__arrows your-class-arrows splide__arrows--ltr">
+        <button class="splide__arrow your-class-arrow splide__arrow--prev your-class-prev" type="button" aria-label="Go to last slide" aria-controls="splide01-track"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></button>
+        <button class="splide__arrow your-class-arrow splide__arrow--next your-class-next" type="button" aria-label="Next slide" aria-controls="splide01-track"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></button>
+    </div>
+
+    <!-- 左右のグラデーション -->
+    <!-- <div class="z-10 sp-gradation-left absolute h-full w-56 top-0 left-0"></div> -->
+    <!-- <div class="z-10 sp-gradation-right absolute h-full w-56 top-0 right-0"></div> -->
+
+
+    <!-- 本体 -->
     <div class="splide__track">
-        <div class="z-10 sp-gradation-right absolute h-full w-60 top-0 right-0"></div>
-        <div class="z-10 sp-gradation-left absolute h-full w-60 top-0 left-0"></div>
-        <ul class="splide__list">
+        <div class="splide__list">
             <li class="splide__slide">
-                <div class="splide__slide__container h-full">
+                <div class="splide__slide__container">
                     <Card
+                        card_number='1'
                         href="#"
                         title="邦画の人気はコンテンツ重視か"
                         body="海外では脚本の完成時点でヒット予測ができてしまうという。ネットフリックスのランキングが日本だけ独特すぎると話題になった。"
@@ -22,8 +32,9 @@ import '@splidejs/splide/css/sea-green';
                 </div>
             </li>
             <li class="splide__slide">
-                <div class="splide__slide__container h-full">
+                <div class="splide__slide__container">
                     <Card
+                        card_number='2'
                         href="#"
                         title="業務効率化アプリ作成"
                         body="就労移行支援事業所における毎月の書類作成を自動化するデスクトップアプリを作成してみた。"
@@ -31,8 +42,9 @@ import '@splidejs/splide/css/sea-green';
                 </div>
             </li>
             <li class="splide__slide">
-                <div class="splide__slide__container h-full">
+                <div class="splide__slide__container">
                     <Card
+                        card_number='3'
                         href="#"
                         title="求人サイトから各種条件を抽出しリスト化してみた"
                         body="deed"
@@ -40,16 +52,16 @@ import '@splidejs/splide/css/sea-green';
                 </div>
             </li>
             <li class="splide__slide">
-                <div class="splide__slide__container h-full">
+                <div class="splide__slide__container">
                     <Card
+                        card_number='4'
                         href="#"
                         title="なんでもかんでも"
                         body="ここにテキストが入ります"
                     />
                 </div>
             </li>
-        </ul>
-       
+        </div>
     </div>
     
 
@@ -58,11 +70,16 @@ import '@splidejs/splide/css/sea-green';
 <style>
 
 .splide {
-  max-width: 960px;
+  max-width: 2000px;
+  min-width: 300px;
   height: 100%;
-  padding: 1.5em 3em;
-  background: linear-gradient(to left, #B8D3D1 20%, hwb(143 74% 0%) 50%, #B8D3D1 80%);
+  width: 100%;
+  padding: 4em 0em;
 
+}
+
+.ul{
+    padding: 0px;
 }
 
 .splide__track {
@@ -71,24 +88,19 @@ import '@splidejs/splide/css/sea-green';
 }
 
 .splide__slide {
-  width: 50%;
-  height: 80%;
-  opacity: .3; /* 左右のスライドを薄くする */
+  margin: auto;
+  opacity: .6; /* 左右のスライドを薄くする */
   transform: scale(1); /* 左右のスライドを小さくする */
   transition: .7s; /* ゆっくり小さくさせる */
-  background: #FF3C00;
-  border-radius: 2rem;
 }
 
 /* アクティブなスライドのスタイル */
 .splide__slide.is-active {
-  opacity: 0.9; /* 中央のスライドは薄くしない */
+  overflow: visible;
+  opacity: 1; /* 中央のスライドは薄くしない */
   transform: scale(1); /* 中央のスライドは小さくしない */
   z-index: 1; /* 中央のスライドを一番上にする */
-  background-color: #14726E;
   background-size:cover;
-  border: 2px solid #50c9c3 ;
-  padding: 3px;
 
 }
 
@@ -96,14 +108,31 @@ import '@splidejs/splide/css/sea-green';
 
 
 .sp-gradation-right {
-  background-image: linear-gradient(to right,rgba(255,255,255,0) 0, #B8D3D1 60%);
+  background-image: linear-gradient(to right,rgba(255,255,255,0) 0, #f8f8f8 60%);
   
 }
 
 .sp-gradation-left {
-  background-image: linear-gradient(to left,rgba(255,255,255,0) 0, #B8D3D1 60%);
+  background-image: linear-gradient(to left,rgba(255,255,255,0) 0, #f8f8f8 60%);
   
 }
+
+.splide__arrow--prev.your-class-prev {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    left: 10%;
+
+}
+
+.splide__arrow--next.your-class-next {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    right: 10%;
+
+}
+
 
 
 </style>
@@ -117,18 +146,23 @@ import '@splidejs/splide/css/sea-green';
         autoWidth: true,
         autoHeight: true,
         rewind: true,
-        gap: 32,
-        focus: 'center',
-        perPage: 3,
+        gap: "100px",
+        focus: "center",
+        perPage: 1,
+        perMove: 1,
         autoplay: true,
         interval: 3000,
         pauseOnHover: true,
         updateOnMove: true,
-        padding: 0,
+        padding: "0px",
         pagination: true,
 
-
-
+        classes: {
+		arrows: 'splide__arrows your-class-arrows',
+		arrow : 'splide__arrow your-class-arrow',
+		prev  : 'splide__arrow--prev your-class-prev',
+		next  : 'splide__arrow--next your-class-next',
+        },
 
 
     });
