@@ -9,17 +9,17 @@ import Vanta from './Vanta.astro';
 ---
 
 <!-- <Vanta> -->
-<div class="h-screen min-h-[600px] bg-black p-4">
+<div class="h-screen min-h-[600px] bg-black sm:p-4">
   <section
-    class="z-10 grid h-full grid-cols-6 grid-rows-12 rounded-3xl bg-white outline outline-8 outline-black"
+    class="z-10 grid h-full grid-cols-6 grid-rows-12 bg-white outline outline-8 outline-black sm:rounded-3xl"
   >
     <!-- 1行目6列 ナビゲーション-->
     <div
-      class="relative order-1 col-span-6 row-span-1 flex overflow-hidden px-6 py-4"
+      class="relative order-1 col-span-6 row-span-1 flex overflow-hidden px-3 py-4 sm:px-6"
     >
       <div class="my-auto w-1/3 flex-none items-center">
         <h1
-          class="inlin-block my-auto font-sans text-4xl font-extrabold text-black"
+          class="inlin-block my-auto font-sans text-lg font-extrabold text-black sm:text-xl"
         >
           THIS IS ME
         </h1>
@@ -53,13 +53,17 @@ import Vanta from './Vanta.astro';
         <!-- テキストロール -->
         <div class="relative flex w-full overflow-x-hidden font-sans font-bold">
           <div class="animate-marquee whitespace-nowrap">
-            <span class="mx-4 text-xl">最終更新日:2024-7-24</span>
-            <span class="mx-4 text-xl">お祈りカウントリアルタイム公開中→</span>
+            <span class="mx-4 text-base sm:text-xl">最終更新日:2024-7-24</span>
+            <span class="mx-4 text-base sm:text-xl"
+              >お祈りカウントリアルタイム公開中→</span
+            >
           </div>
 
           <div class="animate-marquee2 absolute top-0 whitespace-nowrap">
-            <span class="mx-4 text-xl">最終更新日:2024-7-24</span>
-            <span class="mx-4 text-xl">お祈りカウントリアルタイム公開中→</span>
+            <span class="mx-4 text-base sm:text-xl">最終更新日:2024-7-24</span>
+            <span class="mx-4 text-base sm:text-xl"
+              >お祈りカウントリアルタイム公開中→</span
+            >
           </div>
         </div>
         <div class="ml-auto aspect-square h-[100%] rounded-full bg-hero-lime">
@@ -67,7 +71,7 @@ import Vanta from './Vanta.astro';
       </div>
       <!-- 通知アイコン -->
       <div
-        class="ml-4 aspect-square h-full flex-none rounded-full border-[1px] border-black bg-white"
+        class="ml-1 aspect-square h-full flex-none rounded-full border-[1px] border-black bg-white sm:ml-4"
       >
       </div>
     </div>
@@ -112,7 +116,7 @@ import Vanta from './Vanta.astro';
 
     <!-- プロフィール -->
     <div
-      class="relative z-10 order-4 col-span-7 row-span-3 mx-16 h-full flex-col bg-white sm:col-span-2 sm:row-span-4"
+      class="relative z-10 order-4 col-span-4 row-span-5 mx-16 h-full flex-col bg-white sm:col-span-2 sm:row-span-4"
     >
       <p class="font-sans text-sm font-medium">
         未経験からのIT転職をめざすポートフォリオサイトです。<br />
@@ -187,9 +191,9 @@ import Vanta from './Vanta.astro';
 
     <!-- コンタクトボタンエリア -->
     <div
-      class="relative z-10 order-6 col-span-6 row-span-1 mt-auto flex h-full rounded-b-3xl bg-white px-2 drop-shadow-[0_17px_0px_rgba(44,44,44,1)] sm:col-span-2"
+      class="relative z-10 order-6 col-span-6 row-span-1 mt-auto flex h-full rounded-b-3xl bg-white px-2 drop-shadow-[0_30px_0px_rgba(44,44,44,1)] sm:col-span-2"
     >
-      <div class="row-span-1 flex w-full">
+      <div class="-z-10 row-span-1 flex w-full">
         <ButtonLink
           class="round mb-2 mt-auto flex-grow bg-hero-orange text-white"
           >Contact</ButtonLink
@@ -199,7 +203,7 @@ import Vanta from './Vanta.astro';
 
     <!-- サイトマップ（仮） -->
     <div
-      class="order-7 col-span-6 row-span-3 flex w-full items-center bg-black sm:col-span-2 sm:row-span-2"
+      class="z-10 order-7 col-span-6 row-span-3 flex w-full items-center bg-black sm:col-span-2 sm:row-span-2"
     >
       <div class="w-full px-4 sm:w-1/2 lg:w-1/4">
         <h2

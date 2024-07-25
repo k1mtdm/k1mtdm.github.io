@@ -4,20 +4,12 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-    // screens: {
-    // 	xl: {
-    // 	  max: '1200px',
-    // 	},
-    // 	lg: {
-    // 	  max: '992px',
-    // 	},
-    // 	md: {
-    // 	  max: '768px',
-    // 	},
-    // 	sm: {
-    // 	  max: '576px',
-    // 	},
-    // },
+    screens: {
+      sm: '480px',
+      md: '765px',
+      lg: '976px',
+      xl: '1440px',
+    },
 
     extend: {
       colors: {
