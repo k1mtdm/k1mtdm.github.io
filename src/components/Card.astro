@@ -12,21 +12,19 @@ import { number } from 'astro/zod';
 import ToolsIcon from './ToolsIcon.astro';
 ---
 
-<a
-  href={href}
-  class="relative inline-block h-64 w-96 rounded-3xl bg-gainsboro px-8 pt-6"
->
+<a href={href} class="relative inline-block h-60 w-72 rounded-3xl px-8">
   <span
-    class="absolute -bottom-5 -right-5 inline-block overflow-visible font-sans text-9xl font-extrabold"
+    class="font-poppins absolute -bottom-5 -right-5 inline-block overflow-visible text-4xl font-extrabold"
     >{card_number}</span
   >
-  <div class="h-1/4 rounded-t-3xl">
-    <span
-      class="text-bg-green)] inline-block font-roboto text-3xl font-extrabold"
+  <div class="">
+    <span class="text-bg-green inline-block font-sans text-xl font-bold"
       >{title}</span
     >
   </div>
   <div class="">
-    <p class="break-word text-bg-green font-sans text-lg font-light">{body}</p>
+    <p class="break-word text-bg-green font-sans text-base font-light">
+      {body}
+    </p>
   </div>
 </a>

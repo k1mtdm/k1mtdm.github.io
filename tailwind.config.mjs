@@ -4,11 +4,15 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
+    container: {
+      center: true,
+    },
+
     screens: {
-      sm: '480px',
-      md: '765px',
-      lg: '976px',
-      xl: '1440px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
     },
 
     extend: {
@@ -33,6 +37,24 @@ export default {
         ],
         roboto: [
           'Roboto',
+          'Noto Sans JP Variable',
+          ...defaultTheme.fontFamily.sans,
+        ],
+
+        mont: [
+          'Montserrat Alternates',
+          'Noto Sans JP Variable',
+          ...defaultTheme.fontFamily.sans,
+        ],
+
+        anton: [
+          'Anton',
+          'Noto Sans JP Variable',
+          ...defaultTheme.fontFamily.sans,
+        ],
+
+        poppins: [
+          'Poppins',
           'Noto Sans JP Variable',
           ...defaultTheme.fontFamily.sans,
         ],
@@ -76,5 +98,28 @@ export default {
     },
   },
 
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          maxWidth: '95%',
+          'padding-left': '8px',
+          'padding-right': '8px',
+
+          //   '@screen sm': {
+          //     maxWidth: '600px',
+          //   },
+          //   '@screen md': {
+          //     maxWidth: '700px',
+          //   },
+          //   '@screen lg': {
+          //     maxWidth: '900px',
+          //   },
+          //   '@screen xl': {
+          //     maxWidth: '1200px',
+          //   },
+        },
+      });
+    },
+  ],
 };

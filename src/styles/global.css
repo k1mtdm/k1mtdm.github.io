@@ -1,52 +1,105 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
-
-h1 {
-  font-family: 'Roboto', 'M PLUS 1 Variable', sans-serif;
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 1.0;
-}
-
-h2 {
-  font-family: 'Inter', 'M PLUS 1 Variable', sans-serif;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 0.8;
-  
-}
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 header {
-  background-color: 0E183C;
-
+  background-color: 0e183C;
 }
 
 .palt {
-  font-feature-settings: "palt";
+  font-feature-settings: 'palt';
+}
+
+/* ビューポート幅 375px 以下に有効 */
+@media (width <= 375px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+
+/* ビューポート幅 375px 超～ 1280px 未満に有効 */
+@media (375px < width < 1280px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+
+/* ビューポート幅 1280px 以上に有効 */
+@media (1280px <= width) {
+  h1 {
+    font-size: 67px;
+  }
+}
+
+/* ビューポート幅 375px 以下に有効 */
+@media (width <= 375px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+
+/* ビューポート幅 375px 超～ 1280px 未満に有効 */
+@media (375px < width < 1280px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+/* ビューポート幅 1280px 以上に有効 */
+@media (1280px <= width) {
+  h2 {
+    font-size: 32px;
+  }
+}
+
+/* ビューポート幅 375px 以下に有効 */
+@media (width <= 375px) {
+  h3 {
+    font-size: 16px;
+  }
+}
+
+/* ビューポート幅 375px 超～ 1280px 未満に有効 */
+@media (375px < width < 1280px) {
+  h3 {
+    font-size: 16px;
+  }
+}
+
+/* ビューポート幅 1280px 以上に有効 */
+@media (1280px <= width) {
+  h3 {
+    font-size: 16px;
+  }
+}
+
+/* ビューポート幅 375px 以下に有効 */
+@media (width <= 375px) {
+  p {
+    font-size: 16px;
+  }
 }
 
 .my-parts {
-	display: inline-block;
-	font-size: 16px;
-	padding: .8em 1.6em .4em .8em;
-	position: relative;
-	color: #fff;
-	z-index: 1;
+  display: inline-block;
+  font-size: 16px;
+  padding: 0.8em 1.6em 0.4em 0.8em;
+  position: relative;
+  color: #fff;
+  z-index: 1;
   width: 100%;
   height: 100%;
 }
 .my-parts::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: -1;
-	background: #01579B;
-	transform: scaleY(1.3) perspective(.6em) rotateX(deg);
-	transform-origin: bottom left;
-	border-radius: 8px 8px 0 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: #01579b;
+  transform: scaleY(1.3) perspective(0.6em) rotateX(deg);
+  transform-origin: bottom left;
+  border-radius: 8px 8px 0 0;
 }

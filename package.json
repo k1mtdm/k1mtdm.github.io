@@ -9,9 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --ignore-path .gitignore --write './**/*.{js,cjs,ts,jsx,tsx,astro,json,html,md}'"
-    
   },
-
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@astrojs/react": "^3.6.0",
@@ -20,6 +18,8 @@
     "@fontsource-variable/m-plus-1": "^5.0.17",
     "@fontsource-variable/m-plus-1-code": "^5.0.19",
     "@fontsource-variable/noto-sans-jp": "^5.0.19",
+    "@fontsource/anton": "^5.0.20",
+    "@fontsource/montserrat-alternates": "^5.0.13",
     "@fontsource/poppins": "^5.0.14",
     "@splidejs/splide": "^4.1.4",
     "@types/react": "^18.3.3",
