@@ -9,6 +9,7 @@ import Navigation from './Navigation.astro';
 import Layout from '../layouts/Layout.astro';
 import ProgressBar from './ProgressBar.astro';
 import Article from './Article.astro';
+import Header from './Header.astro';
 ---
 
 <div class="flex">
@@ -16,7 +17,7 @@ import Article from './Article.astro';
     class="relative z-0 h-auto w-screen bg-white pt-[44px] md:h-screen md:min-h-[600px]"
   >
     <!-- ナビゲーションバー -->
-    <Navigation />
+    <Header />
     <div class="container h-full w-full bg-white" id="">
       <div class="h-full">
         <section
@@ -25,10 +26,10 @@ import Article from './Article.astro';
           <!-- タイトルエリア -->
 
           <div
-            class="z-0 order-1 col-span-6 row-span-2 flex-1 overflow-hidden overflow-y-hidden md:col-span-2 md:row-span-5"
+            class="z-0 order-1 col-span-6 row-span-2 flex-1 overflow-hidden overflow-y-hidden md:col-span-2 md:row-span-4"
           >
             <div
-              class="relative z-10 flex flex-col items-center justify-center border-[px] py-[44px] lg:py-[24px]"
+              class="relative z-10 flex flex-col border-[px] py-[44px] lg:py-[24px]"
             >
               <div class="">
                 <h1 class="palt font-mont font-bold leading-none text-black">
@@ -36,7 +37,7 @@ import Article from './Article.astro';
                 </h1>
 
                 <p class="mt-0 font-sans text-2xl font-medium">
-                  (will be) Data Engineer,Analyst & Digital Marketing
+                  (will be) Digital Marketing Enginner
                 </p>
                 <h2 class="font-mont font-semibold text-gainsboro">
                   2023-2024
@@ -51,25 +52,21 @@ import Article from './Article.astro';
           <!-- 上段右 成果物エリア -->
 
           <div
-            class="relative order-3 col-span-6 row-span-5 hidden py-4 pl-4 md:col-span-4 md:block"
+            class="relative order-3 col-span-6 row-span-12 hidden p-8 md:col-span-4 md:block"
           >
-            <Vanta>
+            <div class="flex h-full items-center overflow-hidden px-7">
               <div
-                class="flex h-full items-center overflow-hidden border-[1px] border-black px-7 outline outline-1 outline-offset-4 outline-black"
+                class="z-20 ml-auto h-64 w-80 items-center rounded-xl border border-gray-100/30 bg-slate-50 bg-opacity-30 px-4 py-6 shadow-lg backdrop-blur-xl"
               >
-                <div
-                  class="z-20 ml-auto h-64 w-80 items-center rounded-xl border border-gray-100/30 bg-slate-50 bg-opacity-30 px-4 py-6 shadow-lg backdrop-blur-xl"
-                >
-                  <h4 class="font-sans">最終更新日 : 2024-08-07</h4>
-                  <p></p>
-                </div>
+                <h4 class="font-sans">最終更新日 : 2024-08-07</h4>
+                <p></p>
               </div>
-            </Vanta>
+            </div>
           </div>
 
           <!-- プロフィール -->
           <div
-            class="order-4 col-span-6 row-span-2 flex h-full w-full flex-col border-t-[1px] border-black py-8 pr-8 md:order-5 md:col-span-2 md:row-span-7 lg:py-4"
+            class="order-3 col-span-6 row-span-2 flex h-full w-full flex-col border-t-[1px] border-black py-8 pr-8 md:col-span-2 md:row-span-7 lg:py-4"
           >
             <h3 class="font-poppins font-semibold text-black md:mb-0 md:mt-0">
               About this site
@@ -81,7 +78,7 @@ import Article from './Article.astro';
               採用担当者様はもちろん、同じように未経験から転職を考えている方にとって有意義な内容になっていると思います。
             </p>
             <div>
-              <h3 class="font-poppins my-3 font-semibold text-black">
+              <h3 class="my-3 font-poppins font-semibold text-black">
                 Profile
               </h3>
               <p>氏名：非公開</p>
@@ -92,70 +89,6 @@ import Article from './Article.astro';
           </div>
 
           <!-- 下段中 -->
-          <div class="order-3 col-span-4 row-span-7">
-            <div
-              class="flex h-full w-full flex-wrap items-stretch gap-3 py-3 pl-4"
-            >
-              <!-- ABOUT -->
-              <div
-                class="order-0 h-[200px] w-[calc(75%-0.75rem)] rounded-3xl border-[1px] border-black bg-black p-8 outline outline-[1px] -outline-offset-4 outline-white"
-              >
-                <h3 class="font-poppins font-medium text-[#ffffff]">
-                  About this site
-                </h3>
-                <p class="text-wrap text-base text-white">
-                  未経験からデータ分析、デジタルマーケティング領域への転職の為に作成したポートフォリオサイトです。
-                  主にPythonによるデータ分析、可視化を目的とした成果物を公開しています。
-                  またエンジニアポートフォリオサイト作成の記録、及び転職活動の記録（不採用通知）も残しています。
-                  採用担当者様はもちろん、同じように未経験から転職を考えている方にとって有意義な内容になっていると思います。
-                </p>
-              </div>
-              <!--  -->
-              <div
-                class="order-1 h-auto w-[25%] rounded-3xl border-[1px] border-black bg-ne-green outline outline-[1px] -outline-offset-4 outline-black"
-              >
-                <h3></h3>
-              </div>
-              <div
-                class="order-2 h-[160px] w-[25%] rounded-3xl border-[1px] border-black bg-ne-green outline outline-[1px] -outline-offset-4 outline-black"
-              >
-              </div>
-              <div
-                class="order-3 w-[calc(50%-1.5rem)] rounded-3xl border-[1px] border-black bg-black p-8 outline outline-[1px] -outline-offset-4 outline-white"
-              >
-                <h3 class="font-poppins font-medium text-[#ffffff]">Skills</h3>
-                <ProgressBar class="w-[80%]" progress="80" />
-              </div>
-              <!-- SKILL -->
-              <div class="order-4 w-[25%] bg-slate-400">
-                <ProgressBar class="w-[80%]" progress="80" />
-              </div>
-              <div
-                class="order-5 flex h-[10%] w-full rounded-full border-2 border-black bg-white"
-              >
-                <div
-                  class="relative flex h-full w-full items-center justify-center overflow-x-hidden font-sans font-bold"
-                >
-                  <div class="animate-marquee whitespace-nowrap">
-                    <span class="mx-4 text-base sm:text-xl"
-                      >最終更新日:2024-7-24</span
-                    >
-                    <span class="mx-4 text-base sm:text-xl"
-                      >お祈りカウントリアルタイム公開中→</span
-                    >
-                  </div>
-                  <div class="animate-marquee2 whitespace-nowrap">
-                    <span class="mx-4 text-base sm:text-xl"
-                      >最終更新日:2024-7-24</span
-                    >
-                    <span class="mx-4 text-base sm:text-xl"
-                      >お祈りカウントリアルタイム公開中→</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
       </div>
 
@@ -188,13 +121,3 @@ import Article from './Article.astro';
     </div>
   </div>
 </div>
-
-<!-- <div
-    class="relative z-0 h-[320px] w-[30vw] overflow-hidden rounded-3xl border-2 border-black bg-white outline outline-2 outline-offset-2 outline-black sm:block"
-  >
-    <Vanta>
-      <div class="h-[100%] w-[100%]">
-        <Carousel />
-      </div>
-    </Vanta>
-  </div> -->

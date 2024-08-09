@@ -1,13 +1,14 @@
 ---
-import Navigation from "./Navigation.astro";
-import { fade } from 'astro:transitions';
+import Navigation from './Navigation.astro';
+import Humburger from './Humburger.astro';
 import '../styles/global.css';
-
 ---
 
-<header class="absolute bg-black inset-x-0 top-0 z-50" transition:animate={fade({ duration: '0.4s' })}>
-    <nav>
-        <Navigation />
-    </nav>
-</header>
+<header
+  class="absolute top-0 z-10 flex h-[44px] w-full items-center border-b bg-slate-700"
+>
+  <div><h1 class="font-sans text-base font-semibold">K1MTDM</h1></div>
 
+  <div class="ml-auto"><Navigation /></div>
+  <div class="ml-auto h-full sm:hidden"><Humburger /></div>
+</header>
