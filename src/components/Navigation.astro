@@ -1,56 +1,37 @@
 <!-- ナビゲーション -->
-<nav class="nav-links flex h-full w-full">
-  <a href="#" class="flex-grow hover:text-hero-lime">Profile</a>
-  <a href="#" class="flex-grow hover:text-hero-lime">Making this</a>
-  <a href="#" class="flex-grow hover:text-hero-lime">Works</a>
-  <a href="#" class="hover:text-hero-lime">Contact</a>
+<nav class="nav absolute -z-10">
+  <ul class="nav__list">
+    <li class="nav__item"><a href="/">home</a></li>
+    <li class="nav__item"><a href="#">自己紹介</a></li>
+    <li class="nav__item"><a href="#">作品</a></li>
+    <li class="nav__item"><a href="#">応募履歴</a></li>
+    <li class="nav__item"><a href="#">お問い合わせ</a></li>
+  </ul>
 </nav>
 
 <style>
-  .nav-links {
+  .nav {
+    position: fixed;
     width: 100%;
-    top: 5rem;
-    left: 48px;
-    background-color: #ff9776;
-    display: none;
-    margin: 0;
+    height: 100vh;
+    top: 0;
+    right: -120%;
+    background-color: #1484ff;
+    padding: 5rem 0;
+    transition: all 0.5s;
   }
-
-  .nav-links a {
+  .nav__item a {
     display: block;
-    text-align: center;
-    padding: 10px 0;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    padding: 20px 0 20px 32px;
     text-transform: uppercase;
   }
-
-  .nav-links a:hover,
-  a:focus {
-    background-color: #ff9776;
+  .nav__item a:hover {
+    color: #1484ff;
+    background-color: #fff;
   }
-
-  .expanded {
-    display: unset;
-  }
-
-  @media screen and (min-width: 636px) {
-    .nav-links {
-      margin-left: 5em;
-      display: block;
-      position: static;
-      width: auto;
-      background: none;
-    }
-
-    .nav-links a {
-      display: inline-block;
-      padding: 15px 20px;
-    }
-
-    .hamburger {
-      display: none;
-    }
+  .nav.open {
+    right: 0;
   }
 </style>

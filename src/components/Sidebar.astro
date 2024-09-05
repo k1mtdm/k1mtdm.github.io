@@ -1,0 +1,28 @@
+---
+import { Icon } from 'astro-iconify';
+---
+
+<div
+  class="absolute right-0 z-0 hidden h-screen w-[67px] flex-none flex-col border-l-[1px] border-black bg-white md:block"
+>
+  <div class="h-1/3"></div>
+  <div class="flex h-1/3 justify-center">
+    <p
+      class="mx-auto inline-block w-fit font-sans text-xl [writing-mode:vertical-rl]"
+    >
+      keiichi mitsudome<br />portfolio site
+    </p>
+  </div>
+  <div class=""></div>
+  <div class="mt-auto flex h-1/3 w-full flex-col items-end justify-end pb-8">
+    <div class="mx-auto mb-3">
+      <Icon class="h-8 w-8 text-black" name="ri:twitter-x-line" />
+    </div>
+    <div class="mx-auto mb-3">
+      <Icon class="h-9 w-9 text-black" name="simple-icons:speakerdeck" />
+    </div>
+    <div class="mx-auto">
+      <Icon class="h-9 w-9 text-black" name="simple-icons:github" />
+    </div>
+  </div>
+</div>

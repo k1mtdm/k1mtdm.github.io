@@ -53,7 +53,7 @@ import '@splidejs/splide/css/sea-green';
           <Card
             card_number="1"
             href="#"
-            title="邦画の人気はコンテンツ重視か"
+            title="Profile"
             body="海外では脚本の完成時点でヒット予測ができてしまうという。ネットフリックスのランキングが日本だけ独特すぎると話題になった。"
           />
         </div>
@@ -94,11 +94,10 @@ import '@splidejs/splide/css/sea-green';
 
 <style>
   .splide {
-    max-width: 780px;
-    min-width: 380px;
+    min-width: 30px;
     height: 100%;
     width: 100%;
-    padding: 4em 0em;
+    padding: 0em 5em;
     /* background-color: #f8f8f8; */
   }
 
@@ -147,19 +146,20 @@ import '@splidejs/splide/css/sea-green';
     position: absolute;
     z-index: 20;
     top: 50%;
-    left: 5%;
+    left: 3%;
   }
 
   .splide__arrow--next.your-class-next {
     position: absolute;
     z-index: 20;
     top: 50%;
-    right: 5%;
+    right: 3%;
   }
 </style>
 
 <script>
   import Splide from '@splidejs/splide';
+  import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
   const splide = new Splide('.splide', {
     type: 'loop',
@@ -167,11 +167,13 @@ import '@splidejs/splide/css/sea-green';
     autoWidth: true,
     autoHeight: true,
     rewind: true,
-    gap: '100px',
+    gap: '16px',
     focus: 'center',
-    perPage: 1,
-    perMove: 1,
-    autoplay: true,
+    perPage: 3,
+
+    autoScroll: {
+      speed: 0.3,
+    },
     interval: 3000,
     pauseOnHover: true,
     updateOnMove: true,
@@ -187,6 +189,6 @@ import '@splidejs/splide/css/sea-green';
   });
 
   document.addEventListener('DOMContentLoaded', function () {
-    splide.mount();
+    splide.mount({ AutoScroll });
   });
 </script>

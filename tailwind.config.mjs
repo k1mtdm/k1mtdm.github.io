@@ -102,9 +102,7 @@ export default {
     function ({ addComponents }) {
       addComponents({
         '.container': {
-          maxWidth: '95%',
-          'padding-left': '8px',
-          'padding-right': '8px',
+          maxWidth: '100%',
 
           //   '@screen sm': {
           //     maxWidth: '600px',
