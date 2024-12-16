@@ -104,18 +104,18 @@ export default {
         '.container': {
           maxWidth: '100%',
 
-          //   '@screen sm': {
-          //     maxWidth: '600px',
-          //   },
-          //   '@screen md': {
-          //     maxWidth: '700px',
-          //   },
-          //   '@screen lg': {
-          //     maxWidth: '900px',
-          //   },
-          //   '@screen xl': {
-          //     maxWidth: '1200px',
-          //   },
+          '@screen sm': {
+            maxWidth: '700px',
+          },
+          '@screen md': {
+            maxWidth: '900px',
+          },
+          '@screen lg': {
+            maxWidth: '1000px',
+          },
+          '@screen xl': {
+            maxWidth: '1200px',
+          },
         },
       });
     },

@@ -2,15 +2,36 @@
 import Navigation from './Navigation.astro';
 import Humburger from './Humburger.astro';
 import '../styles/global.css';
+import { Icon } from 'astro-iconify';
 ---
 
-<header class="border-b-[1px] border-black bg-ne-blue">
-  <div class="relative z-30 flex h-20 w-full items-center px-[16px]">
-    <div class="logo flex px-4 font-poppins text-3xl text-white">
-      <span class="font-serif text-3xl"></span>Dome
+<header class="">
+  <div class="relative z-30 flex h-[44px] w-full items-center px-[16px]">
+    <div
+      class="logo flex flex-1 items-center px-4 font-poppins text-3xl text-white"
+    >
+      <span class=""
+        ><Icon
+          class="-ml-4 mr-2 h-[24px] w-[24px] text-lime-300"
+          name="material-symbols:rocket-launch-rounded"
+        /></span
+      >
+      Portfolio
     </div>
-    <Navigation />
-    <Humburger />
+    <div
+      class="md: hidden h-full flex-[33%] list-none items-center text-center font-poppins text-xl text-white md:flex"
+    >
+      <li class="flex-1"><a href="#" class="hover:text-blue-300">Home</a></li>
+      <li class="flex-1"><a href="#" class="hover:text-blue-300">about</a></li>
+      <li class="flex-1"><a href="#" class="hover:text-blue-300">work</a></li>
+      <li class="flex-1">
+        <a href="#" class="hover:text-blue-300">contact</a>
+      </li>
+    </div>
+    <div class="ml-auto flex flex-1 items-end">
+      <Navigation />
+      <Humburger />
+    </div>
   </div>
 </header>
 

@@ -14,25 +14,21 @@ import Sidebar from './Sidebar.astro';
 import ProfileCard from './ProfileCard.astro';
 ---
 
-<Sidebar />
-<Header />
-
-<div
-  class="absolute top-0 z-0 h-screen w-screen pt-20 md:min-h-[600px] md:pr-[67px]"
->
-  <div class="h-[40vh] w-full p-[16px]">
-    <div class="h-full w-full">
-      <div
-        class="grid h-full grid-cols-2 bg-[url('/src/images/alexis-fauvet-PXHnwEmFzrk-unsplash.jpg')] bg-cover p-[24px]"
-      >
-        <div class="order-1 flex flex-col">
+<div class="overfl ow-hidden min-h-[500px] w-[100%]">
+  <div
+    class="bg-[url('/src/images/alexis-fauvet-PXHnwEmFzrk-unsplash.jpg')] bg-cover"
+  >
+    <Header />
+    <div class="container h-[calc(70vh_-_44px)] min-h-[350px]">
+      <div class="grid h-full grid-cols-4 grid-rows-4 p-[44px]">
+        <div class="order-2 col-span-2 row-span-4 flex hidden flex-col">
           <h1
-            class="font-poppins font-medium leading-none text-[#fff] shadow-black drop-shadow-sm"
+            class="mt-[24px] text-nowrap font-anton text-5xl font-medium text-[#fff] shadow-black drop-shadow-sm"
           >
-            Portfolio
+            Decording me
           </h1>
-          <h2 class="text-nowrap font-normal leading-none text-gray-300">
-            Desital Marketing
+          <h2 class="text-nowrap font-normal text-gray-300">
+            (maybe) Desital Marketing Engineer
           </h2>
           <h2 class="font-normal leading-none text-gray-300">Data Engineer</h2>
 
@@ -45,109 +41,101 @@ import ProfileCard from './ProfileCard.astro';
             >
           </div>
         </div>
-        <div class="order-2 ml-auto flex h-full flex-col items-end justify-end">
-          <div class="flex flex-1 bg-slate-500"></div>
-          <div class="flex flex-1 bg-blue-400"></div>
-          <div class="flex-1"></div>
-
-          <div class="flex flex-col items-end gap-0 text-xl text-white">
-            <h5 class="font-semibold">Github</h5>
-            <h5 class="font-semibold">Speakerdeck</h5>
-            <h5 class="font-semibold">Twitter / X</h5>
-            <!-- <Icon class="h-8 w-8 text-white" name="ri:twitter-x-line" />
-            <Icon class="h-8 w-8 text-white" name="simple-icons:github" />
-            <Icon
-              class="h-9 w-9 leading-3 text-white"
-              name="simple-icons:speakerdeck"/> -->
-          </div>
+        <div class="order-1 col-span-4 row-span-4 h-full overflow-hidden">
+          <h3 class="m-plus-2-800 text-5xl text-white">
+            ようこそ、<br />ポートフォリオへ<br />Python<br />データ分析<br
+            />機械学習<br />Web開発
+          </h3>
         </div>
       </div>
     </div>
   </div>
   <!-- about -->
-
-  <div class="flex h-[50vh] flex-col px-[16px]">
-    <article
-      class="group/card relative flex flex-1 flex-col overflow-hidden text-nowrap border-b-[1px] border-black px-8 text-black transition-all duration-1000 ease-in-out hover:flex-[50%] hover:bg-sky-900"
-    >
-      <h2
-        class="my-auto w-full font-poppins text-3xl font-bold group-hover/card:top-0 group-hover/card:my-4 group-hover/card:text-hero-lime"
+  <div class="grid h-[60vh] sm:h-[30vh] sm:grid-cols-2">
+    <div class="flex flex-col px-[16px]">
+      <article
+        class="group/card relative flex flex-1 flex-col overflow-hidden text-nowrap border-b-[1px] border-black px-8 text-black transition-all duration-1000 ease-in-out hover:flex-[50%] hover:bg-sky-900"
       >
-        About this site
-      </h2>
-      <p
-        class="hidden text-wrap text-lg text-white group-hover/card:inline-block"
+        <h2
+          class="my-auto w-full font-poppins text-3xl font-bold group-hover/card:top-0 group-hover/card:my-4 group-hover/card:text-hero-lime"
+        >
+          About this site
+        </h2>
+        <p
+          class="hidden text-wrap text-lg text-white group-hover/card:inline-block"
+        >
+          未経験からWebマーケティング領域（データエンジニア）への転職を目的としたポートフォリオサイトです。
+          約2年間の学習（独学）の成果、及びスキルを公開しています。
+          また、学習方法や転職活動の記録も公開していますので失敗談も含め参考にしてください。
+        </p>
+        <h3
+          class="hidden text-wrap text-lg text-white group-hover/card:inline-block"
+        >
+          キーワード
+        </h3>
+        <p
+          class="hidden text-wrap text-lg text-white group-hover/card:inline-block"
+        >
+          Python,データ分析,SQL,統計
+        </p>
+      </article>
+      <article
+        class="group/card relative flex flex-1 flex-col overflow-hidden text-nowrap border-b-[1px] border-black px-8 text-black transition-[flex] duration-1000 ease-in-out hover:flex-[70%] hover:bg-sky-900"
       >
-        未経験からWebマーケティング領域（データエンジニア）への転職を目的としたポートフォリオサイトです。
-        約2年間の学習（独学）の成果、及びスキルを公開しています。
-        また、学習方法や転職活動の記録も公開していますので失敗談も含め参考にしてください。
-      </p>
-      <h3
-        class="hidden text-wrap text-lg text-white group-hover/card:inline-block"
-      >
-        キーワード
-      </h3>
-      <p
-        class="hidden text-wrap text-lg text-white group-hover/card:inline-block"
-      >
-        Python,データ分析,SQL,統計
-      </p>
-    </article>
-    <article
-      class="group/card relative flex flex-1 flex-col overflow-hidden text-nowrap border-b-[1px] border-black px-8 text-black transition-[flex] duration-1000 ease-in-out hover:flex-[70%] hover:bg-sky-900"
-    >
-      <h2
-        class="my-auto w-full font-poppins text-3xl font-bold group-hover/card:top-0 group-hover/card:my-4 group-hover/card:text-orange-600"
-      >
-        Profile
-      </h2>
-      <div class="hidden text-wrap text-xl group-hover/card:inline-block">
-        <ul class="font-sans text-white">
-          <li>氏名： 満留慶一</li>
-          <li>生年： 1990年</li>
-          <li>出身： 福岡県北九州市</li>
-          <li>趣味： 映画鑑賞</li>
-          <li></li>
-        </ul>
-        <ProgressBar class="w-[80%]" progress="80" />
-        <ProgressBar class="w-[60%]" progress="60" />
-      </div>
-    </article>
-    <article
-      class="-mb-10 flex flex-1 overflow-hidden text-nowrap px-8 text-black"
-    >
-      <h2
-        class="my-auto font-poppins text-3xl font-bold group-hover/card:top-0"
-      >
-        Work
-      </h2>
-    </article>
-    <div class="relative h-[20vh] border-b-[1px] border-black">
-      <Carousel />
+        <h2
+          class="my-auto w-full font-poppins text-3xl font-bold group-hover/card:top-0 group-hover/card:my-4 group-hover/card:text-orange-600"
+        >
+          Profile
+        </h2>
+        <div class="hidden text-wrap text-xl group-hover/card:inline-block">
+          <ul class="font-sans text-white">
+            <li>氏名： 満留慶一</li>
+            <li>生年： 1990年</li>
+            <li>出身： 福岡県北九州市</li>
+            <li>趣味： 映画鑑賞</li>
+            <li></li>
+          </ul>
+          <ProgressBar class="w-[80%]" progress="80" />
+          <ProgressBar class="w-[60%]" progress="60" />
+        </div>
+      </article>
+      <article class="flex flex-1 overflow-hidden text-nowrap px-8 text-black">
+        <h2
+          class="my-auto font-poppins text-3xl font-bold group-hover/card:top-0"
+        >
+          Work
+        </h2>
+      </article>
+      <!-- <div class="relative h-[20vh] border-b-[1px] border-black">
+        <Carousel />
+      </div> -->
     </div>
-    <article
-      class="group/card relative flex flex-1 overflow-hidden text-nowrap border-b-[1px] border-black px-8 text-black transition-[flex] duration-700 ease-in-out hover:flex-[70%] hover:bg-hero-lime"
-    >
-      <h2
-        class="my-auto font-poppins text-3xl font-bold group-hover/card:top-0"
+    <div class="flex flex-col px-[16px]">
+      <article
+        class="group/card relative flex flex-1 overflow-hidden text-nowrap border-b-[1px] border-black px-8 text-black transition-[flex] duration-700 ease-in-out hover:flex-[70%] hover:bg-hero-lime"
       >
-        Actions
-      </h2>
-      <h4
-        class="absolute top-24 mx-8 hidden text-wrap text-xl group-hover/card:inline-block"
+        <h2
+          class="my-auto font-poppins text-3xl font-bold group-hover/card:top-0"
+        >
+          Actions
+        </h2>
+        <h4
+          class="absolute top-24 mx-8 hidden text-wrap text-xl group-hover/card:inline-block"
+        >
+          イチジク
+          ‘とよみつひめ’の果実発育期における気温変動に対する生育特性について。
+        </h4>
+      </article>
+      <article
+        class="group/card relative flex flex-1 overflow-hidden text-nowrap px-8 text-black transition-[flex] duration-700 ease-in-out hover:bg-hero-lime"
       >
-        イチジク
-        ‘とよみつひめ’の果実発育期における気温変動に対する生育特性について。
-      </h4>
-    </article>
-    <article
-      class="group/card relative flex flex-1 overflow-hidden text-nowrap px-8 text-black transition-[flex] duration-700 ease-in-out hover:bg-hero-lime"
-    >
-      <h2
-        class="my-auto font-poppins text-3xl font-bold group-hover/card:top-0"
-      >
-        Contact
-      </h2>
-    </article>
+        <h2
+          class="my-auto font-poppins text-3xl font-bold group-hover/card:top-0"
+        >
+          Contact
+        </h2>
+      </article>
+      <div class="flex flex-1"></div>
+    </div>
   </div>
 </div>
