@@ -14,23 +14,26 @@ import Sidebar from './Sidebar.astro';
 import ProfileCard from './ProfileCard.astro';
 ---
 
-<div class="overfl ow-hidden min-h-[500px] w-[100%]">
+<div class="min-h-[500px] w-[100%] overflow-hidden">
   <div
     class="bg-[url('/src/images/alexis-fauvet-PXHnwEmFzrk-unsplash.jpg')] bg-cover"
   >
     <Header />
-    <div class="container h-[calc(70vh_-_44px)] min-h-[350px]">
-      <div class="grid h-full grid-cols-4 grid-rows-4 p-[44px]">
-        <div class="order-2 col-span-2 row-span-4 flex hidden flex-col">
-          <h1
-            class="mt-[24px] text-nowrap font-anton text-5xl font-medium text-[#fff] shadow-black drop-shadow-sm"
+    <div class="relative h-[calc(100vh_-_120px)] min-h-[350px]">
+      <div
+        class="absolute right-0 z-50 mx-[32px] mb-[32px] h-[calc(80vh_-_152px)]"
+      >
+        <ProfileCard />
+      </div>
+      <div class="container grid h-full grid-cols-4 grid-rows-4 p-[48px]">
+        <div class="order-3 col-span-2 row-span-1 flex-col">
+          <h2
+            class="m-plus-2-600 mt-[24px] text-wrap text-5xl font-medium text-[#fff] shadow-black drop-shadow-sm"
           >
-            Decording me
-          </h1>
-          <h2 class="text-nowrap font-normal text-gray-300">
-            (maybe) Desital Marketing Engineer
           </h2>
-          <h2 class="font-normal leading-none text-gray-300">Data Engineer</h2>
+          <h3 class="text-nowrap font-normal text-gray-300">
+            (maybe) Desital Marketing Engineer
+          </h3>
 
           <div class="mt-auto flex h-fit gap-2">
             <ButtonLink class="round ghost mt-auto font-sans"
@@ -41,101 +44,16 @@ import ProfileCard from './ProfileCard.astro';
             >
           </div>
         </div>
-        <div class="order-1 col-span-4 row-span-4 h-full overflow-hidden">
-          <h3 class="m-plus-2-800 text-5xl text-white">
-            ようこそ、<br />ポートフォリオへ<br />Python<br />データ分析<br
-            />機械学習<br />Web開発
+        <div class="order-1 col-span-2 row-span-4 h-full overflow-hidden">
+          <h1 class="m-plus-2-800 text-5xl text-white">Portfolio</h1>
+          <h3 class="text-nowrap font-normal text-gray-300">
+            Hello, I'm Keiichi M, learning Data Engineering.<br />
+            Let's decording me!
           </h3>
         </div>
+        <div class="order-2 col-span-2 row-span-5 h-full overflow-hidden"></div>
       </div>
     </div>
   </div>
-  <!-- about -->
-  <div class="grid h-[60vh] sm:h-[30vh] sm:grid-cols-2">
-    <div class="flex flex-col px-[16px]">
-      <article
-        class="group/card relative flex flex-1 flex-col overflow-hidden text-nowrap border-b-[1px] border-black px-8 text-black transition-all duration-1000 ease-in-out hover:flex-[50%] hover:bg-sky-900"
-      >
-        <h2
-          class="my-auto w-full font-poppins text-3xl font-bold group-hover/card:top-0 group-hover/card:my-4 group-hover/card:text-hero-lime"
-        >
-          About this site
-        </h2>
-        <p
-          class="hidden text-wrap text-lg text-white group-hover/card:inline-block"
-        >
-          未経験からWebマーケティング領域（データエンジニア）への転職を目的としたポートフォリオサイトです。
-          約2年間の学習（独学）の成果、及びスキルを公開しています。
-          また、学習方法や転職活動の記録も公開していますので失敗談も含め参考にしてください。
-        </p>
-        <h3
-          class="hidden text-wrap text-lg text-white group-hover/card:inline-block"
-        >
-          キーワード
-        </h3>
-        <p
-          class="hidden text-wrap text-lg text-white group-hover/card:inline-block"
-        >
-          Python,データ分析,SQL,統計
-        </p>
-      </article>
-      <article
-        class="group/card relative flex flex-1 flex-col overflow-hidden text-nowrap border-b-[1px] border-black px-8 text-black transition-[flex] duration-1000 ease-in-out hover:flex-[70%] hover:bg-sky-900"
-      >
-        <h2
-          class="my-auto w-full font-poppins text-3xl font-bold group-hover/card:top-0 group-hover/card:my-4 group-hover/card:text-orange-600"
-        >
-          Profile
-        </h2>
-        <div class="hidden text-wrap text-xl group-hover/card:inline-block">
-          <ul class="font-sans text-white">
-            <li>氏名： 満留慶一</li>
-            <li>生年： 1990年</li>
-            <li>出身： 福岡県北九州市</li>
-            <li>趣味： 映画鑑賞</li>
-            <li></li>
-          </ul>
-          <ProgressBar class="w-[80%]" progress="80" />
-          <ProgressBar class="w-[60%]" progress="60" />
-        </div>
-      </article>
-      <article class="flex flex-1 overflow-hidden text-nowrap px-8 text-black">
-        <h2
-          class="my-auto font-poppins text-3xl font-bold group-hover/card:top-0"
-        >
-          Work
-        </h2>
-      </article>
-      <!-- <div class="relative h-[20vh] border-b-[1px] border-black">
-        <Carousel />
-      </div> -->
-    </div>
-    <div class="flex flex-col px-[16px]">
-      <article
-        class="group/card relative flex flex-1 overflow-hidden text-nowrap border-b-[1px] border-black px-8 text-black transition-[flex] duration-700 ease-in-out hover:flex-[70%] hover:bg-hero-lime"
-      >
-        <h2
-          class="my-auto font-poppins text-3xl font-bold group-hover/card:top-0"
-        >
-          Actions
-        </h2>
-        <h4
-          class="absolute top-24 mx-8 hidden text-wrap text-xl group-hover/card:inline-block"
-        >
-          イチジク
-          ‘とよみつひめ’の果実発育期における気温変動に対する生育特性について。
-        </h4>
-      </article>
-      <article
-        class="group/card relative flex flex-1 overflow-hidden text-nowrap px-8 text-black transition-[flex] duration-700 ease-in-out hover:bg-hero-lime"
-      >
-        <h2
-          class="my-auto font-poppins text-3xl font-bold group-hover/card:top-0"
-        >
-          Contact
-        </h2>
-      </article>
-      <div class="flex flex-1"></div>
-    </div>
-  </div>
 </div>
+<div class="h-[100vh] w-[100%] overflow-hidden"></div>

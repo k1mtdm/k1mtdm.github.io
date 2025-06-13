@@ -9,14 +9,146 @@ import Hero2 from '../components/Hero2.astro';
 
 import ContactButton from '../components/ButtonLink.astro';
 import ReactComponents from '../components/React.jsx';
-
+import ChartArea from '../components/ChartArea.astro';
+import DoughnutChart from '../components/DoughnutChart.astro';
+import ButtonLink from '../components/ButtonLink.astro';
 const pageTitle = 'ホームページ';
 ---
 
 <Layout title="Portfolio">
-  <main class="relative">
-    <Hero2 />
+  <!-- header start -->
+  <Header />
+  <!-- header end -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content">
+    <!-- Logo -->
+    <figure
+      class="logo logo-portfolio fixed bottom-0 left-0 z-40 mx-[2rem] my-4 font-sans font-extrabold italic"
+    >
+      <a class="text-3xl">PORTFOLIO.</a>
+    </figure>
+    <!-- END Logo -->
+
+    <div id="hero" class="px-4 sm:px-6 lg:px-8">
+      <div
+        class="first-view flex h-screen max-h-[67.5rem] flex-col pt-[--header-height]"
+      >
+        <!-- HERO -->
+        <section
+          class="hero mb-3 flex h-[70%] min-h-[20rem] flex-col rounded-2xl bg-[url('/src/images/alexis-fauvet-PXHnwEmFzrk-unsplash.jpg')] bg-cover"
+        >
+          <div class="mt-auto w-2/3 pb-5 ps-5 md:max-w-lg md:pb-10 md:ps-10">
+            <section class="mb-3">
+              <span class="block text-white">Untitled</span>
+              <h1 class="font-poppins text-xl text-white md:text-3xl">
+                AI, Data Engineer
+              </h1>
+              <span class="block text-white"
+                >未経験からITエンジニアへの転職を目指し作成したポートフォリオサイトです</span
+              >
+            </section>
+            <ButtonLink class="round ghost mt-auto font-sans"
+              >Contact</ButtonLink
+            >
+          </div>
+        </section>
+        <!-- END HERO  -->
+        <!-- flex box start -->
+        <sectiion class="flex flex-grow gap-3 px-[1rem] py-3">
+          <div class="card relative flex-1"></div>
+
+          <div class="card flex flex-1">
+            <div>
+              <h3>＜更新情報＞</h3>
+              <ul>
+                <li>test</li>
+                <li>test2</li>
+              </ul>
+            </div>
+          </div>
+        </sectiion>
+        <!-- flex box end -->
+      </div>
+    </div>
+    <!-- END HERO SECTON -->
+
+    <!-- プロフィールエリア開始 -->
+    <div
+      class="ml-[240px] h-screen w-[calc(100%_-_240px)] bg-[url('/src/images/omar-eagle-XV60oUvDZI0-unsplash.jpg')] bg-cover"
+    >
+      <div class="mx-[20px] flex h-1/3 flex-col">
+        <h2 class="mt-auto font-roboto text-3xl text-white">Profile</h2>
+        <p class="">
+          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
+          />
+          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+        </p>
+      </div>
+    </div>
+
+    <!-- プロフィールエリア終了 -->
+
+    <!-- スキルエリア開始 -->
+    <div class="mx-auto h-screen w-[calc(100%_-_2rem)] px-[20px]">
+      <div class="flex h-1/2 flex-col">
+        <h2 class="mb-3 mt-auto font-roboto text-3xl">技術スタック</h2>
+        <p>
+          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+        </p>
+
+        <div class="inline-block py-9">
+          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
+          />
+          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
+          />
+          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+        </div>
+      </div>
+
+      <!-- スキルカードエリア開始 -->
+      <div id="" class="flex h-1/2 flex-col overflow-hidden">
+        <div class="mt-auto flex gap-3">
+          <div class="relative h-96 flex-1">
+            <figure class="absolute top-64 h-full w-full bg-slate-400"></figure>
+          </div>
+          <div class="relative h-96 flex-1">
+            <figure class="absolute top-48 h-full w-full bg-slate-400"></figure>
+          </div>
+          <div class="relative h-96 flex-1">
+            <figure class="absolute top-32 h-full w-full bg-slate-400"></figure>
+          </div>
+          <div class="relative h-96 flex-1">
+            <figure class="absolute top-16 h-full w-full bg-slate-400"></figure>
+          </div>
+          <div class="relative h-96 flex-1">
+            <figure class="absolute top-0 h-full w-full bg-slate-400"></figure>
+          </div>
+        </div>
+      </div>
+      <!-- スキルカードエリア終了 -->
+    </div>
+    <!-- スキルエリア終了 -->
+    <!-- プロジェクト紹介開始 -->
+    <div class="mx-auto h-screen">
+      <div class="grid h-full grid-cols-3">
+        <div class="col-span-1">
+          <h2>WORK</h2>
+          <ul>
+            <li class="">農業DX</li>
+            <li class="">業務効率化アプリ</li>
+            <li class="">NETFLIXユーザー分析</li>
+            <li class=""></li>
+          </ul>
+        </div>
+        <div class="col-span-2 bg-red-800"></div>
+      </div>
+    </div>
+    <!-- プロジェクト紹介終了 -->
   </main>
+  <!-- main end -->
+  <!-- footer start -->
+  <!-- footer end   -->
   <script>
     import '../scripts/menu.js';
   </script>

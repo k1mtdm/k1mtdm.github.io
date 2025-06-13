@@ -5,29 +5,34 @@ import '../styles/global.css';
 import { Icon } from 'astro-iconify';
 ---
 
-<header class="">
+<header class="absolute w-full">
   <div
-    class="relative z-30 flex h-[44px] w-full items-center px-[16px] py-[48px]"
+    class="relative z-30 flex h-[--header-height] w-full items-center px-[32px]"
   >
     <div
-      class="logo flex flex-1 items-center px-8 font-poppins text-3xl text-white"
+      class="logo flex flex-1 items-center font-poppins text-[24px] font-bold text-white"
     >
       <span class=""
         ><Icon
-          class="-ml-4 mr-2 h-[24px] w-[24px] text-lime-300"
+          class="mr-3 h-[24px] w-[24px] text-lime-300"
           name="material-symbols:rocket-launch-rounded"
         /></span
       >
-      Portfolio
+      1990-2024
     </div>
     <div
       class="md: hidden h-full flex-[33%] list-none items-center text-center font-poppins text-xl text-white md:flex"
     >
       <li class="flex-1"><a href="#" class="hover:text-blue-300">Home</a></li>
-      <li class="flex-1"><a href="#" class="hover:text-blue-300">about</a></li>
-      <li class="flex-1"><a href="#" class="hover:text-blue-300">work</a></li>
       <li class="flex-1">
-        <a href="#" class="hover:text-blue-300">contact</a>
+        <a href="#" class="hover:text-blue-300">Profile</a>
+      </li>
+      <li class="flex-1">
+        <a href="#" class="hover:text-blue-300">Portfolio</a>
+      </li>
+      <li class="flex-1"><a href="#" class="hover:text-blue-300">Skill</a></li>
+      <li class="flex-1">
+        <a href="#" class="hover:text-blue-300">Contact</a>
       </li>
     </div>
     <div class="ml-auto flex flex-1 items-end">

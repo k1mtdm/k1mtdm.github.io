@@ -2,6 +2,15 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body {
+  --header-height: 3rem;
+}
+
+.container {
+  width: min(100% - 2rem, 1280px);
+  margin-inline: auto;
+}
+
 header {
   background-color: 0e183C;
 }
@@ -78,24 +87,4 @@ header {
   p {
     font-size: 16px;
   }
-}
-
-.scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.container::-webkit-scrollbar {
-  display: none;
-}
-
-.m-plus-2-800 {
-  font-family: 'M PLUS 2', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
 }

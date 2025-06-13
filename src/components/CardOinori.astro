@@ -1,15 +1,18 @@
 ---
 interface Props {
-	date: string;
-	company_name: string;
+  date: string;
+  company_name: string;
 }
 
 const { date, company_name } = Astro.props;
 ---
-<div class="flex z-0 w-6/6 h-2/6 py-3 px-12 bg-gray-100 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 border border-gray-300">
-    <div class="flex mr-5 items-center justify-center">
-        （ic）
-    </div>    
-    <p class="flex items-center justify-center">{date} : <br>
-    {company_name} にお祈りされました</p>
+
+<div
+  class="w-6/6 z-0 flex h-2/6 rounded-3xl border border-gray-300 bg-gray-100 bg-opacity-80 bg-clip-padding px-12 py-3 backdrop-blur-sm backdrop-filter"
+>
+  <div class="mr-5 flex items-center justify-center">（ic）</div>
+  <p class="flex items-center justify-center">
+    {date} : <br />
+    {company_name} にお祈りされました
+  </p>
 </div>

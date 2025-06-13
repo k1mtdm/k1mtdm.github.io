@@ -36,13 +36,16 @@ import '@fontsource/anton';
       rel="stylesheet"
     />
   </head>
-  <body class="">
-    <slot />
-    <script>
-      import '../scripts/menu.js';
-    </script>
+  <body>
+    <div class="nav_open relative bg-gray-300">
+      <slot />
+      <script>
+        import '../scripts/menu.js';
+      </script>
+    </div>
   </body>
 </html>
+
 <style is:global>
   :root {
     --accent: 136, 58, 234;

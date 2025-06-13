@@ -1,0 +1,49 @@
+---
+import Chart from 'chart.js/auto';
+import { getRelativePosition } from 'chart.js/helpers';
+---
+
+<canvas id="myChart" class="w-auto"></canvas>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Python', 'SQL', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [
+        {
+          label: 'Portable Skill',
+          data: [8, 9, 3, 5, 2, 3],
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'y',
+      scales: {
+        x: {
+          grid: {
+            display: false, // 横軸のグリッド（縦線たち）を非表示
+          },
+          border: {
+            display: false, // 横軸の線を非表示
+          },
+        },
+        y: {
+          grid: {
+            display: false, // 横軸のグリッド（横線たち）を非表示
+          },
+          border: {
+            display: false, // 縦軸の線を非表示
+          },
+        },
+      },
+    },
+  });
+</script>
